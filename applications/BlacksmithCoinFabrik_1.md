@@ -20,16 +20,26 @@ With this grant, our objective is to conduct a comprehensive analysis to identif
 
 ### Project Details
 
-As mentioned before, we have already identified a number of E2E functionalities that are not present in integration tests. For example:
-- A different implementation of storage in integration testing.
+As mentioned before, we have already identified a number of E2E functionalities that are not present in integration tests.
+
+For example:
+- A different implementation of storage in integration testing vs E2E testing. The same storage limitations present in E2E should also be present in integration testing.
 - Inability to perform delegatecall in integration tests. 
-- Inability to perform contract-to-contract calls in integration tests.
+- Inability to perform cross contract calls in integration tests.
 - Gas consumption is not integrated.
-- Inconsistencies.
+- Address inconsistencies. Alice and Bob addresses differ between integration and E2E tests environments.
 
-This analysis is not exhaustive, as it simply highlights some difficulties encountered while performing another task. Therefore, as you will see later on, our proposal is to begin the work by conducting a more comprehensive and focused analysis.
+This list is not exhaustive, as it simply highlights some difficulties we encountered while conducting integration tests for vulnerability examples during the development of detectors for our static analyzer, [Scout](https://github.com/CoinFabrik/scout). 
 
-Furthermore, we have not been able to thoroughly analyze the complexity or feasibility of generating the necessary tests. The analysis we just mentioned will allow us to better understand which improvements will truly be possible to develop.
+The overall advantage of integration tests is that, since they are performed off-chain, they are significantly faster than E2E tests, which imply compiling and deploying the smart contract to a Substrate node. We believe that having a complete set of functionalities for integration tests will allow developers to thoroughly test their code more quickly. Particularly, we believe the impossibility to perform cross contract calls in integration tests is a limitation for developers trying to assess interactions across different contracts. This can be done through E2E tests, but it takes more time.
+
+Our proposal is to begin our work by making a full review of the current functionalities of integration tests and E2E tests. From this revision, we will assemble a comparative table, identifying differences and proposing improvements and missing developments to be made for integration tests. For specific cases where the enhancement or missing functionality is clear, and the implementation of the enhancement is deemed feasible, code examples could be provided to show the current limitations of integration tests. 
+
+Furthermore, we need to thoroughly analyze the complexity and feasibility of generating the necessary tests. The analysis we just mentioned will allow us to better understand which improvements will truly be possible to develop. This includes listing the missing functionalities in integration tests that are available for E2E testing, analyzing the feasibility of their implementation, and prioritizing their development order.
+
+
+
+
 
 
 ### Ecosystem Fit
