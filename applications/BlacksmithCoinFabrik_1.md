@@ -43,7 +43,7 @@ Furthermore, we need to thoroughly analyze the complexity and feasibility of gen
 
 Having a comprehensive set of functionalities available for integration tests would bring numerous benefits to the entire community, including improved reliability, code quality and maturity, and faster feedback loops.
 
-In the context of fuzzing detectors, integration tests are useful during their development in order to identify fuzzing parameters, and they are quicker than E2E tests. This would aid any team interested in the development of fuzzing detectors for ink! smart contracts (e.g: [Fuzzland](https://github.com/w3f/Grants-Program/blob/master/applications/FuzzLand.md) tean developing [Ityfuzz](https://github.com/fuzzland/ityfuzz),  [Klevoya](https://github.com/w3f/Grants-Program/blob/master/applications/klevoya_fuzzer.md )).
+In the context of fuzzing detectors, integration tests are useful during their development in order to identify fuzzing parameters, and they are quicker than E2E tests. This would aid any team interested in the development of fuzzing detectors for ink! smart contracts (e.g: [Fuzzland](https://github.com/w3f/Grants-Program/blob/master/applications/FuzzLand.md) team developing [Ityfuzz](https://github.com/fuzzland/ityfuzz),  [Klevoya](https://github.com/w3f/Grants-Program/blob/master/applications/klevoya_fuzzer.md )).
 
 ## Team :busts_in_silhouette:
 
