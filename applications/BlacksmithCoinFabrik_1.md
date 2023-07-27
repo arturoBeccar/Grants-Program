@@ -39,14 +39,11 @@ Furthermore, we need to thoroughly analyze the complexity and feasibility of gen
 
 
 
-
-
-
 ### Ecosystem Fit
 
-Having a comprehensive set of tests would bring numerous benefits to the entire community, including improved reliability, code quality, and rapid feedback loops.
+Having a comprehensive set of functionalities available for integration tests would bring numerous benefits to the entire community, including improved reliability, code quality and maturity, and faster feedback loops.
 
-For our work on [Scout](https://github.com/CoinFabrik/scout), this would help us in building fuzzing detectors, as we use integration tests during their development as they are quicker than E2E tests.
+In the context of fuzzing detectors, integration tests are useful during their development in order to identify fuzzing parameters, and they are quicker than E2E tests. This would aid any team interested in the development of fuzzing detectors for ink! smart contracts (e.g: [Fuzzland](https://github.com/w3f/Grants-Program/blob/master/applications/FuzzLand.md) tean developing [Ityfuzz](https://github.com/fuzzland/ityfuzz),  [Klevoya](https://github.com/w3f/Grants-Program/blob/master/applications/klevoya_fuzzer.md )).
 
 ## Team :busts_in_silhouette:
 
@@ -76,6 +73,7 @@ Our team has an academic background in computer science and mathematics, with wo
 
 As well, CoinFabrik has been providing Quality Assurance as a service to development teams, accumulating valuable expertise in the field for a considerable period of time. Our clients highly appreciate this service, and as a result, we are eager to expand our capabilities to the ink! ecosystem.
 
+
 ### Team Code Repos
 
 - https://github.com/CoinFabrik
@@ -91,15 +89,16 @@ As well, CoinFabrik has been providing Quality Assurance as a service to develop
 
 ## Development Status :open_book:
 
-Since this application is the result of some previous work, we have already identified some improvements in integration tests, with different levels of complexity:
+We have already identified some improvements to be made in integration tests, with different levels of complexity:
 - Alice and Bob's addresses should match: Feasible.
 - The storage in the integration environment should have the same limitations as in the blockchain environment (end-to-end): Feasible.
 - Delegate call: Ability to use delegate call in integration tests: Complex, yet feasible.
-- Contract-to-contract calls: To be evaluated.
+Contract-to-contract calls: To be evaluated.
 - Gas usage: To be evaluated.
 
 
-We briefly validated the idea of the analysis and development described in this application with Sam Ruberti from the ink! Ecosystem and David Hawig from Web3 Foundation, who encouraged us to apply for this grant.
+We validated the idea of the analysis and development described in this application with Sam Ruberti from the ink! Ecosystem and David Hawig from Web3 Foundation, who encouraged us to apply for this grant.
+
 
 ## Development Roadmap :nut_and_bolt:
 
@@ -111,47 +110,50 @@ We briefly validated the idea of the analysis and development described in this 
 0.25 Tech Lead,
 1 Full time Sr. Rust Developer,
 1 Full Time SemiSr. Rust Developer)
-- **Total Costs:**  U$D
+- **Total Costs:**  U$D 40,500
 
 
 ### Milestone 1: Analysis
 - **Estimated duration:** 2 weeks
 - **FTE:**  2.75
-- **Costs:** 
+- **Costs:** U$D 13,500
 
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
 | 0a. | License | MIT
-| 0b. | Documentation | Create a comprehensive report that compares the functionalities of Integration tests and E2E (End-to-End) tests. The report should focus on identifying what can be accomplished in E2E tests but not in Integration tests, as well as any inconsistencies found. If applicable, we will provide suggestions that are not covered by either test type.
+| 0b. | Documentation | Create a comprehensive report that compares the functionalities of integration tests and E2E (End-to-End) tests. The report's focus is to identify what can be accomplished in E2E tests but not in integration tests, as well as any inconsistencies. If applicable, we will provide suggestions that are not covered by either test type.
 | 0c. | Testing and Testing Guide | No tests will be produced at this stage.
 | 0d. | Docker | Does not apply at this stage.
 | 0e. | Article | We will prepare a summary report and publish it on our blog https://blog.coinfabrik.com/ 
- **1** | Analyze | Study and compare Integration Tests and E2E (End-to-End) tests in ink!.
- **2** | Evaluate | Assign a complexity level (ranging from 1 to 3, with 1 being the least complex and 3 being the most complex) to each finding.
- **3** | Estimate | Indicate which tests shall be developed during the Milestone #2 (see below) delivery. If the allocated four weeks for Milestone #2 prove to be insufficient, we may consider requesting an extension for this grant.
+ **1** | Analyze | Study and compare Integration and E2E (End-to-End) tests in ink!.
+ **2** | Evaluate | Assign a complexity level to each finding.
+ **3** | Estimate | Indicate which tests shall be developed during the next milestone delivery. If the allocated time for the next milestone is insufficient, we may consider requesting an extension for this grant.
+
 
 
 ### Milestone 2: Execution
 - **Estimated duration:** 4 weeks
 - **FTE:** 2.75
-- **Costs:** 
+- **Costs:** U$D27,000
 
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
 | 0a. | License | MIT
-| 0b. | Documentation | We will provide an update to the Milestone #1 report, including the current status of all identified use cases.
-| 0c. | Testing and Testing Guide | We will develop the missing or improvable functionalities identified in Milestone #1, and submit a pull request to the corresponding Parity repository. We will also provide a Testing Guide with documentation and examples on how to use the developed new functionalities.
+| 0b. | Documentation | We will update our previous report. This includes the current status of identified use cases.
+| 0c. | Testing and Testing Guide | We will develop the missing functionalities identified, and submit a pull request to the corresponding repository.
+The newly developed functionalities will be documented and a testing guide will be included.
 | 0d. | Docker | Does not apply at this stage.
-| 0e. | Article | We will update the summary report with the progress of the development and publish it on our blog at https://blog.coinfabrik.com/.
- **1** | Develop | Build the necessary improvements and missing tests for the identified use cases outlined in Milestone #1.
- **2** | Analyze and Estimate | Consider the development of additional tests throughout the duration of this milestone or subsequent milestones.
+| 0e. | Article | We will publish an updated report in our blog at https://blog.coinfabrik.com/.
+ **1** | Develop | Build the necessary improvements and missing tests for the identified use cases outlined in the first milestone.
+ **2** | Analyze and Estimate | If applicable, suggest additional tests for this or next milestones.
+
 
 
 ## Future Plans
 
-Once we are content with the development of the identified use case, our subsequent task is to commence researching a testing automation solution, along with its associated tools, within the framework of ink! smart contracts.
-
-Additionally, in a separate direction, we will be seeking funding to finalize a beta release of the bug-detection tool [Scout](https://coinfabrik.github.io/scout/ ), which will undoubtedly benefit from the culmination of this work.
+We have two projects in mind:
+1. Research and develop an advanced testing automation solution for ink! smart contracts.
+2. Improve our open source bug-detection tool [Scout](https://coinfabrik.github.io/scout/ )
 ## Referral Program (optional) :moneybag: 
 
 ## Additional Information :heavy_plus_sign:
