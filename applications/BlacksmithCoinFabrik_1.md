@@ -1,15 +1,22 @@
 # Blacksmith CoinFabrik
 - **Team Name:** CoinFabrik (Nektra S.A)
 - **Payment Address:** 0xf488039EDe6B38D7689fDCC6A9FC2dd0EF39D54e (USDC)
-- **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 2
+- **[Level](https://github.com/w3f/Grants-Program/tree/master#level_slider-levels):** 3
 
 ## Project Overview :page_facing_up:
 
 ### Overview
 
-CoinFabrik has successfully accomplished two milestones in the previous set of grants for the development of Scout, a bug-detection tool for ink! developers. We have completed a [Proof of Concept](https://github.com/CoinFabrik/web3-grant) and a [Prototype](https://github.com/CoinFabrik/scout ). During these iterations, we encountered certain challenges, especially while developing fuzzing detectors. These challenges included limited integration tests and differences with the ink! E2E testing environment. Specifically, we faced difficulties when working with functions related to contract calls, storage, gas usage, and delegatecall.
+Blacksmith 1: Flattening the Anvil
 
-With this grant, our objective is to conduct a comprehensive analysis to identify any missing or improvable functionalities in integration tests and to propose developments based on our findings.
+CoinFabrik has successfully accomplished two previous grant milestones for the development of Scout, an open source bug-detection tool for ink! targetted to developers and smart contract auditors.
+
+We have completed a [Proof of Concept](https://github.com/CoinFabrik/web3-grant ) and a [Prototype](https://github.com/CoinFabrik/scout ).
+
+During these iterations, we encountered certain challenges, especially while developing fuzzing detectors. These challenges included limited integration tests and differences with the ink! E2E testing environment. Specifically, we faced difficulties when working with functions related to cross contract calls, storage, gas usage, and delegatecall.
+
+With this grant, our objective is to conduct a comprehensive analysis to identify any other missing functionalities in integration tests, and to propose and develop new testing features based on our findings.
+
 
 ### Project Details
 
