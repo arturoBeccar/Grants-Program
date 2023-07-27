@@ -7,15 +7,15 @@
 
 ### Overview
 
-Blacksmith 1: Flattening the Anvil
-
-CoinFabrik has successfully accomplished two previous grant milestones for the development of Scout, an open source bug-detection tool for ink! targetted to developers and smart contract auditors.
+CoinFabrik has successfully accomplished two previous grant milestones for the development of [Scout](https://coinfabrik.github.io/scout/), an open source bug-detection tool for ink! targetted to developers and smart contract auditors.
 
 We have completed a [Proof of Concept](https://github.com/CoinFabrik/web3-grant ) and a [Prototype](https://github.com/CoinFabrik/scout ).
 
-During these iterations, we encountered certain challenges, especially while developing fuzzing detectors. These challenges included limited integration tests and differences with the ink! E2E testing environment. Specifically, we faced difficulties when working with functions related to cross contract calls, storage, gas usage, and delegatecall.
+During these iterations, we encountered certain challenges, especially while developing fuzzing detectors. These challenges included limitations in integration tests and differences with the ink! E2E testing environment. Specifically, we faced difficulties when working with functions in integration testing related to cross contract calls, storage, gas usage, and delegatecall.
 
-With this grant, our objective is to conduct a comprehensive analysis to identify any other missing functionalities in integration tests, and to propose and develop new testing features based on our findings.
+With this grant, our objective is to conduct a comprehensive analysis to identify any other missing functionalities in integration tests, and to propose and develop new testing features based on our findings. 
+
+Our intention is to `flatten the anvil` of ink! integration testing. With a properly flattened anvil, a quality tools can be built.
 
 
 ### Project Details
@@ -31,7 +31,7 @@ For example:
 
 This list is not exhaustive, as it simply highlights some difficulties we encountered while conducting integration tests for vulnerability examples during the development of detectors for our static analyzer, [Scout](https://github.com/CoinFabrik/scout). 
 
-The overall advantage of integration tests is that, since they are performed off-chain, they are significantly faster than E2E tests, which imply compiling and deploying the smart contract to a Substrate node. We believe that having a complete set of functionalities for integration tests will allow developers to thoroughly test their code more quickly. Particularly, we believe the impossibility to perform cross contract calls in integration tests is a limitation for developers trying to assess interactions across different contracts. This can be done through E2E tests, but it takes more time.
+The overall advantage of integration tests is that, since they are performed off-chain, they are significantly faster than E2E tests, which imply compiling and deploying the smart contract to a Substrate node. We believe that having a complete set of functionalities for integration tests will allow developers to thoroughly test their code more quickly. Particularly, we believe the impossibility to perform cross contract calls in integration tests is a limitation for developers trying to quickly assess interactions across different contracts. This can be done through E2E tests, but it takes more time.
 
 Our proposal is to begin our work by making a full review of the current functionalities of integration tests and E2E tests. From this revision, we will assemble a comparative table, identifying differences and proposing improvements and missing developments to be made for integration tests. For specific cases where the enhancement or missing functionality is clear, and the implementation of the enhancement is deemed feasible, code examples could be provided to show the current limitations of integration tests. 
 
@@ -43,7 +43,7 @@ Furthermore, we need to thoroughly analyze the complexity and feasibility of gen
 
 Having a comprehensive set of functionalities available for integration tests would bring numerous benefits to the entire community, including improved reliability, code quality and maturity, and faster feedback loops.
 
-In the context of fuzzing detectors, integration tests are useful during their development in order to identify fuzzing parameters, and they are quicker than E2E tests. This would aid any team interested in the development of fuzzing detectors for ink! smart contracts (e.g: [Fuzzland](https://github.com/w3f/Grants-Program/blob/master/applications/FuzzLand.md) team developing [Ityfuzz](https://github.com/fuzzland/ityfuzz),  [Klevoya](https://github.com/w3f/Grants-Program/blob/master/applications/klevoya_fuzzer.md )).
+In the context of fuzzing detectors, integration tests are useful during their development in order to identify fuzzing parameters, and they are quicker than E2E tests. We learned this while working on fuzzing detection techniques during the [Proof of Concept of Scout](https://github.com/CoinFabrik/web3-grant), which we performed in collaboration with [researchers from the University of Buenos Aires](https://lafhis.dc.uba.ar/home). We believe that, having a complete set of functionalities for integration tests would be useful for other teams working in the development of fuzzing detectors for ink! smart contracts (e.g: [Fuzzland](https://github.com/w3f/Grants-Program/blob/master/applications/FuzzLand.md) team developing [Ityfuzz](https://github.com/fuzzland/ityfuzz),  [Klevoya](https://github.com/w3f/Grants-Program/blob/master/applications/klevoya_fuzzer.md )).
 
 ## Team :busts_in_silhouette:
 
@@ -93,7 +93,7 @@ We have already identified some improvements to be made in integration tests, wi
 - Alice and Bob's addresses should match: Feasible.
 - The storage in the integration environment should have the same limitations as in the blockchain environment (end-to-end): Feasible.
 - Delegate call: Ability to use delegate call in integration tests: Complex, yet feasible.
-Contract-to-contract calls: To be evaluated.
+- Contract-to-contract calls: To be evaluated.
 - Gas usage: To be evaluated.
 
 
@@ -119,14 +119,14 @@ We validated the idea of the analysis and development described in this applicat
 - **Costs:** U$D 13,500
 
 | Number | Deliverable | Specification |
-| -----: | ----------- | ------------- |
+| ----- | ----------- | ------------- |
 | 0a. | License | MIT
 | 0b. | Documentation | Create a comprehensive report that compares the functionalities of integration tests and E2E (End-to-End) tests. The report's focus is to identify what can be accomplished in E2E tests but not in integration tests, as well as any inconsistencies. If applicable, we will provide suggestions that are not covered by either test type.
 | 0c. | Testing and Testing Guide | No tests will be produced at this stage.
 | 0d. | Docker | Does not apply at this stage.
 | 0e. | Article | We will prepare a summary report and publish it on our blog https://blog.coinfabrik.com/ 
  **1** | Analyze | Study and compare Integration and E2E (End-to-End) tests in ink!.
- **2** | Evaluate | Assign a complexity level to each finding.
+ **2** | Evaluate | Assign a complexity level to each finding based on the difficulty of implementing the missing or enhanced functionality.
  **3** | Estimate | Indicate which tests shall be developed during the next milestone delivery. If the allocated time for the next milestone is insufficient, we may consider requesting an extension for this grant.
 
 
@@ -137,7 +137,7 @@ We validated the idea of the analysis and development described in this applicat
 - **Costs:** U$D27,000
 
 | Number | Deliverable | Specification |
-| -----: | ----------- | ------------- |
+| ----- | ----------- | ------------- |
 | 0a. | License | MIT
 | 0b. | Documentation | We will update our previous report. This includes the current status of identified use cases.
 | 0c. | Testing and Testing Guide | We will develop the missing functionalities identified, and submit a pull request to the corresponding repository.
@@ -153,7 +153,7 @@ The newly developed functionalities will be documented and a testing guide will 
 
 We have two projects in mind:
 1. Research and develop an advanced testing automation solution for ink! smart contracts.
-2. Improve our open source bug-detection tool [Scout](https://coinfabrik.github.io/scout/ )
+2. Improve our open source bug-detection tool [Scout](https://coinfabrik.github.io/scout/)
 ## Referral Program (optional) :moneybag: 
 
 ## Additional Information :heavy_plus_sign:
