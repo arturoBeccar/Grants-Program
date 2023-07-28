@@ -15,8 +15,7 @@ During these iterations, we encountered certain challenges, especially while dev
 
 With this grant, our objective is to conduct a comprehensive analysis to identify any other missing functionalities in integration tests, and to propose and develop new testing features based on our findings. 
 
-Our intention is to `flatten the anvil` of ink! integration testing. With a properly flattened anvil, a quality tools can be built.
-
+Our intention is to `flatten the anvil` of ink! integration testing. With a properly flattened anvil, quality tools can be built.
 
 ### Project Details
 
