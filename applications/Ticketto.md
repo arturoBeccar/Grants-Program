@@ -58,9 +58,8 @@ As part of the future roadmap (beyond this project, that'll help us to build a n
 
 Pablo is a 10+ years experience software engineer, PBA Alumn (Wave 3), with experience as Runtime Engineer at [Virto Network][gh:virto]. Also, he has contributions on several tools available to the ecosystem (like `sube`, `libwallet` — now part of [VirtoSDK][gh:virto_sdk], or [`valor`][gh:virto_valor]), and has given minor contributions on tooling for the Polkadot Fellowship ([RFCs Referenda Bot][gh:rfcs-bot]) and several infrastructure providers ([`ibp-monitor`][gh:ibp_monitor])
 
-> TODO: Fill up @jmcontreras10 info
 
-Mateo is a software engineer with experience in developing solutions related to events and nightlife, as CTO of Nocturnal, an app to enhance the experience people have when going on a night club or bar.
+Mateo, a seasoned full-stack software engineer with over 5 years of experience, has served as the Chief Technology Officer (CTO) at Nocturnal, specializing in solutions for events and nightlife. He brings his expertise in full-stack development to various projects, including ecommerce and digital transformation. Mateo has worked as a Software Engineer for platforms such as Workrise, The Arena Group, and torre.ai. His primary focus is on optimizing the core products to deliver the best experience for both users and clients.
 
 ### Team Code Repos
 
