@@ -24,9 +24,7 @@ To make this a reality, we plan to close the gaps between the current landscape 
 
 Ticketto (チケット, means ticket) is a protocol to enable use cases for ticketing solutions over existing NFTs. This solution doesn't intend to reinvent the wheel, or extend existing protocols related to non-fungibles, but to take the best of the features already out there and wrap around to provide use cases in a consistent manner to developers and users.
 
-As part of our prior research (previous to formal protocol documentation), an mock illustrating what a potential implementation of the [`mark_attendance`][gh:ticketto_call_mark_attendance] call might look like in the future is available on [GitHub][gh:libticketto_mock_attendance_pallet].
-
-We expect the teams to already have a solid idea about your project's expected final state. Therefore, we ask the teams to submit (where relevant):
+As part of our prior research (previous to formal protocol documentation), a mock illustrating what a potential implementation of the [`mark_attendance`][gh:ticketto_call_mark_attendance] call might look like in the future is available on [GitHub][gh:libticketto_mock_attendance_pallet].
 
 #### What this project is not
 
