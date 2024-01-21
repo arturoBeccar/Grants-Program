@@ -8,7 +8,7 @@
 
 ### Overview
 
-*Kippu aims to build a protocol to securely issue, sell/resell, transfer tickets, and get grant to access events.*
+*Kippu aims to build a protocol to securely issue, sell/resell, transfer tickets, and get/grant access to events.*
 
 The event ticketing industry has long been fraught with challenges hindering organizers and attendees. Issues such as ticket fraud, scalping, and a lack of transparency in pricing and distribution have consistently plagued traditional ticketing systems. Additionally to those challenges, minor, independent events struggle with the high costs and complexities of accessing sophisticated ticketing solutions quickly, securely, and scalably. The need for an innovative approach to address these persistent issues is evident.
 
